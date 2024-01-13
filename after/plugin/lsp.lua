@@ -57,3 +57,6 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+
+-- disable inline buffer error messages
+vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
